@@ -28,15 +28,15 @@
                         <td><?=$student['first_name'];?></td>
                         <td><?=$student['email'];?></td>
                         <td>
-                            <a href="<?=site_url('/students/update/' .$student['id']);?>" class="btn btn-warning btn-sm">Update</a> 
-                            <a href="<?=site_url('/students/delete/' .$student['id']);?>" class="btn btn-danger btn-sm">Delete</a>
+                            <a href="<?=site_url('students/update/' .$student['id']);?>" class="btn btn-warning btn-sm">Update</a> 
+                            <a href="<?=site_url('students/delete/' .$student['id']);?>" class="btn btn-danger btn-sm">Delete</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
 
-        <a href="<?=site_url('/students/create');?>" class="btn btn-success btn-lg mt-3">Create New Student</a><br>
+        <a href="<?=site_url('students/create');?>" class="btn btn-success btn-lg mt-3">Create New Student</a><br>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
