@@ -29,7 +29,7 @@ class StudentController extends Controller {
                 'email' => $email
             );
             if($this->StudentModel->insert($data)) {
-                redirect(site_url('/students');
+                redirect(site_url('/students'));
             } else {
                 echo 'Something went wrong';
             }
