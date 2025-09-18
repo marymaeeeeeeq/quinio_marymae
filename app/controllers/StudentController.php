@@ -29,7 +29,7 @@ class StudentController extends Controller {
                 'email' => $email
             );
             if($this->StudentModel->insert($data)) {
-                redirect('/students');
+                redirect(site_url('/students');
             } else {
                 echo 'Something went wrong';
             }
@@ -50,7 +50,7 @@ class StudentController extends Controller {
                 'email' => $email
             );
             if($this->StudentModel->update($id, $data)) {
-                redirect('/students');
+                redirect(site_url('/students'));
             } else {
                 echo 'Something went wrong';
             }
@@ -62,7 +62,7 @@ class StudentController extends Controller {
     public function delete($id) 
     {
         if($this->StudentModel->delete($id)) {
-            redirect('/students');
+            redirect(site_url('/students'));
         } else {
             echo 'Something went wrong';
         }

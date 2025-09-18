@@ -79,7 +79,7 @@ $config['ENVIRONMENT']             = 'development';
 | WARNING: You MUST set this value!
 |
 */
-$config['base_url'] 				= 'https://localhost:8081/';
+$config['base_url'] 				= 'https://quinio-marymae.onrender.com/';
 
 /*
 |--------------------------------------------------------------------------
