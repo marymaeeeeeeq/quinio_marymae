@@ -9,6 +9,8 @@
 <body>
     <div class="container mt-5">
         <center><h1 class="mb-4">Student Management</h1></center>
+
+        <a href="<?=site_url('students/create');?>" class="btn btn-success btn-lg mt-3">Create New Student</a><br>
         <table class="table table-striped table-bordered">
             <thead class="thead-dark">
                 <tr>
@@ -27,15 +29,13 @@
                         <td><?=$student['first_name'];?></td>
                         <td><?=$student['email'];?></td>
                         <td>
-                            <a href="<?=site_url('students/update/' .$student['id']);?>" method="POST" class="btn btn-warning btn-sm">Update</a> 
-                            <a href="<?=site_url('students/delete/' .$student['id']);?>" method="POST" class="btn btn-danger btn-sm">Delete</a>
+                            <a href="<?=site_url('students/update/' .$student['id']);?>" class="btn btn-warning btn-sm">Update</a> 
+                            <a href="<?=site_url('students/delete/' .$student['id']);?>" class="btn btn-danger btn-sm">Delete</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
-
-        <a href="<?=site_url('students/create');?>" method="POST" class="btn btn-success btn-lg mt-3">Create New Student</a>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
