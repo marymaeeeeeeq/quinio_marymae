@@ -9,7 +9,7 @@
 <body>
     <div class="container mt-5">
         <h1 class="mb-4">Update Student</h1>
-        <form action="<?=site_url('students/update/' . $student['id']);?>" method="post">
+        <form action="<?=site_url('/students/update/' . $student['id']);?>" method="post">
             <div class="mb-3">
                 <label for="last_name" class="form-label">Last Name</label>
                 <input type="text" name="last_name" id="last_name" class="form-control" value="<?=html_escape($student['last_name']);?>" required>
