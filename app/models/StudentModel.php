@@ -24,4 +24,29 @@ class StudentModel extends Model {
     {
         parent::__construct();
     }
+
+    public function page($q, $records_per_page = null, $page = null)
+    {
+        if(is_null($page)) {
+            return $this->db->table('students')->getAll();
+        } else {
+            $query = $this->db->table('students');
+
+            $query->like('id','%'.$q.'%')
+                ->or_like('last_name','%'.$q.'%')
+                ->or_like('first_name','%'.$q.'%')
+                ->or_like('email','%'.$q.'%');
+            
+            $countQuery = clone $query;
+            $data['total_rows'] = $countQuery
+                ->select_count('*', 'count')
+                ->get()['count'];
+
+            $data['records'] = $query
+                ->pagination($records_per_page,$page)
+                ->get_all();
+            
+            return $data;
+        }
+    }
 }
