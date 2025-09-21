@@ -51,6 +51,7 @@ class StudentController extends Controller {
 
         $data['page'] = $this->pagination->paginate();
 
+        $data['students'] = $this->StudentModel->all();
         $this->call->view('index', $data);
     }
 

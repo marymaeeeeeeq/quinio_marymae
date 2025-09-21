@@ -51,7 +51,7 @@
     </form>
     
     <center><h1 class="mb-4">Student Management</h1></center>
-    <a href="<?=site_url('students/create');?>" class="btn btn-success btn-lg mt-3">Add Student</a><br>
+    <a href="<?=site_url('students/create');?>" class="btn btn-success btn-lg mt-3">Add Student</a><br><br>
 
     <table class="table table-striped table-bordered">
       <thead class="table-dark">
