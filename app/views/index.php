@@ -64,25 +64,20 @@
         </tr>
       </thead>
       <tbody>
-        <?php if(!empty($students)): ?>
-            <?php foreach(html_escape($students) as $student): ?>
-                <tr>
-                    <td><?=$student['id'];?></td>
-                    <td><?=$student['last_name'];?></td>
-                    <td><?=$student['first_name'];?></td>
-                    <td><?=$student['email'];?></td>
-                    <td>
-                        <a href="<?=site_url('students/update/' .$student['id']);?>" class="btn btn-warning btn-sm">Update</a> 
-                        <a href="<?=site_url('students/delete/' .$student['id']);?>" class="btn btn-danger btn-sm">Delete</a>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
-        <?php else: ?>
-            <tr><td colspan="5" class="text-center">No records found.</td></tr>
-        <?php endif; ?>
+      <?php foreach(html_escape($students) as $student): ?>
+          <tr>
+              <td><?=$student['id'];?></td>
+              <td><?=$student['last_name'];?></td>
+              <td><?=$student['first_name'];?></td>
+              <td><?=$student['email'];?></td>
+              <td>
+                  <a href="<?=site_url('students/update/' .$student['id']);?>" class="btn btn-warning btn-sm">Update</a> 
+                  <a href="<?=site_url('students/delete/' .$student['id']);?>" class="btn btn-danger btn-sm">Delete</a>
+              </td>
+          </tr>
+      <?php endforeach; ?>
       </tbody>
     </table>
-
     <?php
     echo $page;?>
   </div>
