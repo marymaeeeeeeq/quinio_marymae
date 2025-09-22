@@ -24,7 +24,7 @@
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
     h1 {
-      color: #e75480;
+      color: #df547eff;
       font-weight: bold;
     }
     .btn-success {
@@ -74,6 +74,7 @@
                   <td>
                       <a href="<?=site_url('students/update/' .$student['id']);?>" class="btn btn-warning btn-sm">Update</a> 
                       <a href="<?=site_url('students/delete/' .$student['id']);?>" class="btn btn-danger btn-sm">Delete</a>
+                      <a href="" class="btn btn-primary btn-sm">Upload Image</a>
                   </td>
               </tr>
           <?php endforeach; ?>
