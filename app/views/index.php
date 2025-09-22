@@ -30,6 +30,7 @@
     .btn-success {
       background-color: #950ba1ff;
       border-color: #0f0307ff;
+      justify-content: left;
     }
     .btn-success:hover {
       background-color: #950ba1ff;
@@ -74,7 +75,7 @@
                   <td>
                       <a href="<?=site_url('students/update/' .$student['id']);?>" class="btn btn-warning btn-sm">Update</a> 
                       <a href="<?=site_url('students/delete/' .$student['id']);?>" class="btn btn-danger btn-sm">Delete</a>
-                      <a href="" class="btn btn-primary btn-sm">Upload Image</a>
+                      <a href="<?=site_url('');?></a>" class="btn btn-primary btn-sm">Upload Image</a>
                   </td>
               </tr>
           <?php endforeach; ?>
