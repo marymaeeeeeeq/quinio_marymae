@@ -14,7 +14,7 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      font-family: Arial, sans-serif;
+      font-family: 'Times New Roman', Times, serif;
     }
     .container {
       background: rgba(255, 255, 255, 0.9);
@@ -35,6 +35,7 @@
     .btn-success:hover {
       background-color: #950ba1ff;
       border-color: #0b0307ff;
+      justify-content: left;
     }
   </style>
 </head>
