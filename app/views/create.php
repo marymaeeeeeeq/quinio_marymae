@@ -13,7 +13,7 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       background: linear-gradient(135deg, #ff9a9e, #fad0c4);
     }
     .container {
@@ -32,11 +32,11 @@
       margin-bottom: 30px;
     }
     .btn-primary {
-      background-color: rgba(84, 231, 104, 1);
+      background-color: #950ba1ff;
       border-color: #0f0609ff;
     }
     .btn-primary:hover {
-      background-color: rgba(65, 196, 67, 1);
+      background-color: #950ba1ff;
       border-color: #14060aff;
     }
   </style>
