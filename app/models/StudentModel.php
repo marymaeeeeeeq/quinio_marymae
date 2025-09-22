@@ -25,7 +25,7 @@ class StudentModel extends Model {
         parent::__construct();
     }
 
-    public function page($q, $records_per_page = null, $page = null)
+    public function page($q = '', $records_per_page = null, $page = null)
     {
         if(is_null($page)) {
             return $this->db->table('students')->getAll();

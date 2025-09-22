@@ -28,11 +28,11 @@
       font-weight: bold;
     }
     .btn-success {
-      background-color: #57e754ff;
+      background-color: #950ba1ff;
       border-color: #0f0307ff;
     }
     .btn-success:hover {
-      background-color: #1be43dff;
+      background-color: #950ba1ff;
       border-color: #0b0307ff;
     }
   </style>
