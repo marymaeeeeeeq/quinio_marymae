@@ -44,7 +44,7 @@
 
   <div class="upload-box">
     <h2>Upload Image</h2>
-    <form action="<?=site_url('students/upload_success');?>" method="post" enctype="multipart/form-data">
+    <form action="upload_success.php" method="post" enctype="multipart/form-data">
       <div class="mb-3">
         <input class="form-control" type="file" name="fileToUpload" id="fileToUpload" required>
       </div>

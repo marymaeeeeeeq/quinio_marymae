@@ -46,7 +46,7 @@
     <h3>Your file was successfully uploaded!</h3>
     <p><strong>File Name:</strong> <?php echo $filename; ?></p>
 
-    <a href="<?=site_url('students/upload_form');?>" class="btn btn-primary mt-3">Upload Another File/Image</a>
+    <a href="upload_form.php" class="btn btn-primary mt-3">Upload Another File</a>
   </div>
 
 </body>
