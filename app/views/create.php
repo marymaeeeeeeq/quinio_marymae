@@ -60,6 +60,7 @@
         <input type="email" name="email" id="email" class="form-control" required>
       </div>
       
+      <a href="<?=site_url('students');?>" class="btn btn-secondary">Back</a>
       <button type="submit" class="btn btn-primary w-100">Create</button>
     </form>
   </div>

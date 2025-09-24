@@ -48,4 +48,3 @@ $router->get('students', 'StudentController::getAll');
 $router->match('students/create', 'StudentController::create', ['GET', 'POST']);
 $router->match('students/update/{id}', 'StudentController::update', ['GET', 'POST']);
 $router->get('students/delete/{id}', 'StudentController::delete');
-$router->get('students/upload_form', 'StudentController::file_upload');

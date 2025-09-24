@@ -63,8 +63,8 @@
         <input type="email" name="email" id="email" class="form-control" value="<?=html_escape($student['email']);?>" required>
       </div>
       
-      <button type="submit" class="btn btn-primary">Update</button>
       <a href="<?=site_url('students');?>" class="btn btn-secondary">Back</a>
+      <button type="submit" class="btn btn-primary">Update</button>
     </form>
   </div>
 
