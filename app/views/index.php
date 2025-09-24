@@ -35,13 +35,6 @@
       background-color: #950ba1ff;
       border-color: #0b0307ff;
     }
-    .pagination a.active {
-      background-color: #e15cd4ff;
-      color: white;
-    }
-    .pagination a:hover:not(.active) {
-      background-color: #ddd;
-    }
   </style>
 </head>
 <body>
@@ -53,7 +46,7 @@
                   $q = $_GET['q'];
           }
         ?>
-        <input class="form-control me-2" name="q" type="text" placeholder="Search" value="<?= html_escape($q); ?>">
+        <input class="form-control me-2" name="q" type="text" placeholder="Search" value="<?= html_escape($q = ''); ?>">
         <button type="submit" class="btn btn-primary" type="button">Search</button>
     </form>
     
