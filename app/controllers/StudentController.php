@@ -106,7 +106,7 @@ class StudentController extends Controller {
         }
     }
 
-    // public function file_upload() {
+    public function file_upload() {
     //     if($_POST) {
     //         $target_dir = "uploads/";
     //         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -151,6 +151,6 @@ class StudentController extends Controller {
     //     }
     // }
 
-    // $this->call->view('upload_form');
+    $this->call->view('upload_form');
     }
 }
