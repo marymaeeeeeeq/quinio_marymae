@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Upload Image</title>
+  <title>Upload File/Image</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
@@ -43,12 +43,12 @@
 <body>
 
   <div class="upload-box">
-    <h2>Upload Image</h2>
-    <form action="upload_success.php" method="post" enctype="multipart/form-data">
+    <h2>Upload File / Image</h2>
+    <form action="<?php echo site_url('StudentController/file_upload');?>" method="post" enctype="multipart/form-data">
       <div class="mb-3">
         <input class="form-control" type="file" name="fileToUpload" id="fileToUpload" required>
       </div>
-      <input type="submit" value="Upload Image" name="submit" class="btn btn-primary w-100">
+      <input type="submit" value="Upload" name="submit" class="btn btn-primary w-100">
     </form>
   </div>
 
