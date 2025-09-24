@@ -43,8 +43,8 @@
 <body>
 
   <div class="upload-box">
-    <h2>Upload File / Image</h2>
-    <form action="<?php echo site_url('students/upload_form');?>" method="post" enctype="multipart/form-data">
+    <h2>Upload File/Image</h2>
+    <form action="<?php echo site_url('students');?>" method="post" enctype="multipart/form-data">
       <div class="mb-3">
         <input class="form-control" type="file" name="fileToUpload" id="fileToUpload" required>
       </div>

@@ -35,6 +35,13 @@
       background-color: #950ba1ff;
       border-color: #0b0307ff;
     }
+    .pagination a.active {
+      background-color: #e15cd4ff;
+      color: white;
+    }
+    .pagination a:hover:not(.active) {
+      background-color: #ddd;
+    }
   </style>
 </head>
 <body>
@@ -74,7 +81,7 @@
                   <td>
                       <a href="<?=site_url('students/update/' .$student['id']);?>" class="btn btn-warning btn-sm">Update</a> 
                       <a href="<?=site_url('students/delete/' .$student['id']);?>" class="btn btn-danger btn-sm">Delete</a>
-                      <a href="<?=site_url('students/upload_form');?>" class="btn btn-primary btn-sm">Upload Image</a>
+                      <a href="<?=site_url('students/upload_form');?>" class="btn btn-primary btn-sm">Upload</a>
                   </td>
               </tr>
           <?php endforeach; ?>
