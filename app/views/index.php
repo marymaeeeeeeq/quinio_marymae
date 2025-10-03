@@ -74,6 +74,7 @@
                   <td>
                       <a href="<?=site_url('students/update/' .$student['id']);?>" class="btn btn-warning btn-sm">Update</a> 
                       <a href="<?=site_url('students/delete/' .$student['id']);?>" class="btn btn-danger btn-sm">Delete</a>
+                      <a href="<?=site_url('students/upload');?>" class="btn btn-primary btn-sm">Upload</a>
                   </td>
               </tr>
           <?php endforeach; ?>
