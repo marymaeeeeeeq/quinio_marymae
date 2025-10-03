@@ -55,6 +55,31 @@ class StudentController extends Controller {
         $this->call->view('index', $data);
     }
 
+    public function uploadForm() {
+        $this->call->view('upload_form');
+    }
+    public function upload() 
+    {
+        $this->call->library('upload', $_FILES["userfile"]);
+
+        $this->upload
+            ->max_size(5)
+            ->min_size(1)
+            ->set_dir('uploads')
+            ->allowed_extensions(['jpg','jpeg','png','gif'])
+            ->allowed_mimes(['image/jpg','image/jpeg','image/png','image/gif'])
+            ->is_image()
+            ->encrypt_name();
+
+        if($this->upload->do_upload()) {
+            $data['filename'] = $this->upload->get_filename();
+            $this->call->view('upload_success', $data);
+        } else {
+            $data['errors'] = $this->upload->get_errors();
+            $this->call->view('upload_form', $data);
+        }
+    }
+
     public function create()
     {
         if($this->io->method() == 'post') {
@@ -104,53 +129,5 @@ class StudentController extends Controller {
         } else {
             echo 'Something went wrong';
         }
-    }
-
-    public function file_upload() {
-    //     if($_POST) {
-    //         $target_dir = "uploads/";
-    //         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-    //         $uploadOk = 1;
-    //         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-
-    //     if(isset($_POST["submit"])) {
-    //         $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-    //         if($check !== false) {
-    //             echo "File is an image - " . $check["mime"] . ".";
-    //             $uploadOk = 1;
-    //         } else {
-    //             echo "File is not an image.";
-    //             $uploadOk = 0;
-    //         }
-    //     }
-
-    //     if (file_exists($target_file)) {
-    //         echo "Sorry, file already exists.";
-    //         $uploadOk = 0;
-    //     }
-
-    //     if ($_FILES["fileToUpload"]["size"] > 500000) {
-    //         echo "Sorry, your file is too large.";
-    //         $uploadOk = 0;
-    //     }
-
-    //     if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-    //     && $imageFileType != "gif" ) {
-    //         echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-    //         $uploadOk = 0;
-    //     }
-
-    //     if ($uploadOk == 0) {
-    //         echo "Sorry, your file was not uploaded.";
-    //     } else {
-    //         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-    //             echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
-    //         } else {
-    //             echo "Sorry, there was an error uploading your file.";
-    //         }
-    //     }
-    // }
-
-    $this->call->view('upload_form');
     }
 }

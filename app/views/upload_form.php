@@ -3,54 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Upload File/Image</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-    }
-    .upload-box {
-      background: rgba(255, 255, 255, 0.95);
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      text-align: center;
-      max-width: 400px;
-      width: 100%;
-    }
-    h2 {
-      color: #e75480;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .btn-primary {
-      background-color: #950ba1ff;
-      border-color: #0f0609ff;
-    }
-    .btn-primary:hover {
-      background-color: #950ba1ff;
-      border-color: #0f0609ff;
-    }
-  </style>
+  <title> Upload Form </title>
 </head>
 <body>
-
-  <div class="upload-box">
-    <h2>Upload File/Image</h2>
-    <form action="<?php echo site_url('students');?>" method="post" enctype="multipart/form-data">
-      <div class="mb-3">
-        <input class="form-control" type="file" name="fileToUpload" id="fileToUpload" required>
-      </div>
-      <input type="submit" value="Upload" name="submit" class="btn btn-primary w-100">
+    <?php if(!empty($errors)) : ?>
+        <?php foreach($errors as $error) : ?>
+            <p style="color:red"><?= $error ?></p>
+        <?php endforeach; ?>
+    <?php endif; ?>
+    
+    <form action="<?= site_url('upload/do_upload'); ?>" method="post" enctype="multipart/form-data">
+        <input type="file" name="userfile" size="20" >
+        <br><br>
+        <input type="submit" value="Upload" >
     </form>
-  </div>
-
 </body>
 </html>
