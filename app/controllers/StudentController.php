@@ -9,6 +9,16 @@ class StudentController extends Controller {
 
         $this->call->database();
         $this->call->model('StudentModel');
+        $this->call->library('auth');
+
+        if (!$this->auth->is_logged_in()) {
+            redirect(site_url('auth/login'));
+        }
+
+        if (!$this->auth->has_role('admin')) {
+            echo "Access denied!";
+            exit;
+        }
     }
 
     public function getAll() 

@@ -11,8 +11,8 @@
             <p style="color:red"><?= $error ?></p>
         <?php endforeach; ?>
     <?php endif; ?>
-    
-    <form action="<?= site_url('upload/do_upload'); ?>" method="post" enctype="multipart/form-data">
+
+    <form action="<?= site_url('students/do_upload'); ?>" method="post" enctype="multipart/form-data">
         <input type="file" name="userfile" size="20" >
         <br><br>
         <input type="submit" value="Upload" >
