@@ -51,7 +51,7 @@ class Auth {
 
     public function logout()
     {
-        $this->session->unset_userdata(['user_id','username','role','logged_in']);
+        $this->session->sess_destroy();
     }
 }
 ?>
