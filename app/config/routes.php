@@ -45,6 +45,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 
 $router->match('auth/login', 'AuthController::login', ['GET', 'POST']);
 $router->match('auth/register', 'AuthController::register', ['GET', 'POST']);
+$router->get('auth/dashboard', 'AuthController::dashboard');
 $router->get('auth/logout', 'AuthController::logout');
 
 $router->get('/', 'StudentController::getAll');

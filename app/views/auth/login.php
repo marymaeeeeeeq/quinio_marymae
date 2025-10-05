@@ -13,7 +13,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: Arial, sans-serif;
+      font-family:  Arial, Helvetica, sans-serif;
       background: linear-gradient(135deg, #ff9a9e, #fad0c4);
     }
     .login-box {
@@ -36,14 +36,14 @@
       padding: 10px;
     }
     .btn-primary {
-      background-color: #950ba1ff;
+      background-color: #e24d7aff;
       border-color: #e75480;
       border-radius: 10px;
       width: 100%;
       padding: 10px;
     }
     .btn-primary:hover {
-      background-color: #950ba1ff;
+      background-color: #e24d7aff;
       border-color: #c44169;
     }
   </style>
@@ -54,7 +54,7 @@
     <form action="" method="post">
       <input type="text" name="username" class="form-control" placeholder="Username" required><br>
       <input type="password" name="password" class="form-control" placeholder="Password" required><br>
-      <button type="submit" class="btn btn-primary">Login</button>
+      <button type="submit" class="btn btn-primary">Login</button><br>
       <a href="<?=site_url('auth/register');?>" class="btn btn-primary btn-sm">Register</a>
     </form>
   </div>
