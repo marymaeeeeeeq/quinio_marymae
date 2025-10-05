@@ -51,9 +51,9 @@
 <body>
   <div class="login-box">
     <h1>Login</h1>
-    <form action="" method="post">
+    <form action="<?=site_url('auth/dashboard');?></form>" method="post">
       <input type="text" name="username" class="form-control" placeholder="Username" required>
-      <input type="password" name="password" class="form-control" placeholder="Password" required><br>
+      <input type="password" name="password" class="form-control" placeholder="Password" required>
       <button type="submit" class="btn btn-primary">Login</button>
     </form>
     <a href="<?=site_url('auth/register');?>" class="login-link">Don't have an account? Register here</a>
