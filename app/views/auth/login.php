@@ -52,11 +52,11 @@
   <div class="login-box">
     <h1>Login</h1>
     <form action="" method="post">
-      <input type="text" name="username" class="form-control" placeholder="Username" required><br>
+      <input type="text" name="username" class="form-control" placeholder="Username" required>
       <input type="password" name="password" class="form-control" placeholder="Password" required><br>
-      <button type="submit" class="btn btn-primary">Login</button><br>
-      <a href="<?=site_url('auth/register');?>" class="btn btn-primary btn-sm">Register</a>
+      <button type="submit" class="btn btn-primary">Login</button>
     </form>
+    <a href="<?=site_url('auth/register');?>" class="login-link">Don't have an account? Register here</a>
   </div>
 </body>
 </html>
