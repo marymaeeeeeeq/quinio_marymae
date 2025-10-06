@@ -51,7 +51,7 @@
 <body>
   <div class="login-box">
     <h1>Login</h1>
-    <form action="<?=site_url('auth/dashboard');?></form>" method="post">
+    <form action="" method="post">
       <input type="text" name="username" class="form-control" placeholder="Username" required>
       <input type="password" name="password" class="form-control" placeholder="Password" required>
       <button type="submit" class="btn btn-primary">Login</button>
