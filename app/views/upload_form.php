@@ -68,7 +68,7 @@
     <?php endif; ?>
 
     <form action="<?= site_url('students/do_upload'); ?>" method="post" enctype="multipart/form-data">
-      <input type="file" name="userfile" size="20">
+      <input type="file" name="userfile" required>
       <br>
       <input type="submit" value="Upload">
     </form>
