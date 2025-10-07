@@ -75,7 +75,7 @@ class StudentController extends Controller {
         $this->upload
             ->max_size(5)
             ->min_size(1)
-            ->set_dir('uploads')
+            ->set_dir('uploads/')
             ->allowed_extensions(['jpg','jpeg','png','gif'])
             ->allowed_mimes(['image/jpg','image/jpeg','image/png','image/gif'])
             ->is_image()

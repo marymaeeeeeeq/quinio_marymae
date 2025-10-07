@@ -59,7 +59,7 @@
 </head>
 <body>
   <div class="upload-box">
-    <h2>Upload File</h2>
+    <h2>Upload File/Image</h2>
 
     <?php if(!empty($errors)) : ?>
       <?php foreach($errors as $error) : ?>
@@ -68,7 +68,7 @@
     <?php endif; ?>
 
     <form action="<?= site_url('students/do_upload'); ?>" method="post" enctype="multipart/form-data">
-      <input type="file" name="userfile" required>
+      <input type="file" name="student_image" required>
       <br>
       <input type="submit" value="Upload">
     </form>
