@@ -68,7 +68,7 @@ class StudentController extends Controller {
     public function uploadForm() {
         $this->call->view('upload_form');
     }
-    public function upload() 
+    public function do_upload() 
     {
         $this->call->library('upload', $_FILES["userfile"]);
 
