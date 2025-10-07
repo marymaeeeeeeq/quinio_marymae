@@ -68,7 +68,7 @@ class StudentController extends Controller {
     public function uploadForm() {
         $this->call->view('upload_form');
     }
-    public function do_upload() 
+    public function upload() 
     {
         $this->call->library('upload', $_FILES["userfile"]);
 
@@ -82,8 +82,18 @@ class StudentController extends Controller {
             ->encrypt_name();
 
         if($this->upload->do_upload()) {
-            $data['filename'] = $this->upload->get_filename();
-            $this->call->view('upload_success', $data);
+            $filename = $this->upload->get_filename();
+
+            $data = [
+                'last_name' => $this->io->post('last_name'),
+                'first_name' => $this->io->post('first_name'),
+                'email' => $this->io->post('email'),
+                'image' => $filename
+            ];
+
+            $this->StudentModel->insert($data);
+
+            $this->call->view('upload_success', ['filename' => $filename]);
         } else {
             $data['errors'] = $this->upload->get_errors();
             $this->call->view('upload_form', $data);
